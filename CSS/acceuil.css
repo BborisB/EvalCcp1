@@ -1,0 +1,29 @@
+.imgAcceuilDiv
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    background-color: #555;
+    border: #000 solid calc(0.4vw + 0.1em);
+}
+
+.imgAcceuil
+{
+    object-fit: cover;
+    height: 25vw;
+    width: 100%;
+    filter: brightness(0.75);
+}
+
+.catchphrase
+{
+    position: absolute;
+    font-size: calc(0.75em + 1.75vw);
+    color: #fff;
+    text-align: center;
+    text-shadow: calc(0.1em - 0.05vw) calc(0.1em - 0.05vw) 1px #000;
+    padding: 1em;
+    filter: drop-shadow(calc(0.1em - 0.05vw) calc(0.1em - 0.05vw) 1px #000);
+}
