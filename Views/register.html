@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+    <div class="page">
+        <h1>S'enregistrer</h1>
+        <form class="myForm" id="registerForm" action="">
+            <div class="doubleElement">
+                <div class="label-input">
+                    <label for="firstName">Prénom (*)</label>
+                    <input type="text" id="firstName">
+                    <span class="fieldError" id="firstNameErrorText"></span>
+                </div>
+                <div class="label-input">
+                    <label for="lastName">Nom (*)</label>
+                    <input type="text" id="lastName">
+                    <span class="fieldError" id="lastNameErrorText"></span>
+                </div>
+            </div>
+            <div class="label-input">
+                <label for="email">Email (*)</label>
+                <input type="text" id="email">
+                <span class="fieldError" id="emailErrorText"></span>
+            </div>
+            <div class="label-input">
+                <label for="password">Mot de passe (*)</label>
+                <input type="password" id="password">
+                <span class="fieldError" id="passwordErrorText"></span>
+            </div>
+            <div class="label-input">
+                <label for="confirmPassword">Confirmer mot de passe (*)</label>
+                <input type="password" id="confirmPassword">
+                <span class="fieldError" id="confirmPasswordErrorText"></span>
+            </div>
+            <div class="doubleElement">
+                <input type="submit" value="S'enregistrer" id="submitBtn">
+                <input type="reset" value="Reinitialiser" id="resetBtn">
+                <span id="fieldNote">(*) Ces champs sont obligatoires.</span>
+            </div>
+        </form>
+        <form class="myForm" id="registerSuccessful">
+            <span>Vous êtes maintenant enregistrés. <a href="login.html">Connectez vous ici.</a></span>
+        </form>
+    </div>
+    <script src="../JavaScript/style.js"></script>
+    <script src="../JavaScript/register.js"></script>
+</body>
+</html>

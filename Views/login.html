@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Se connecter</h1>
+        <form class="myForm" id="loginForm" action="forum.html">
+            <span class="fieldError" id="loginErrorText"></span>
+            <div class="label-input">
+                <label for="email">Email (*)</label>
+                <input type="text" id="email">
+                <span class="fieldError" id="emailErrorText"></span>
+            </div>
+            <div class="label-input">
+                <label for="password">Mot de passe (*)</label>
+                <input type="password" id="password">
+                <span class="fieldError" id="passwordErrorText"></span>
+            </div>
+            <div class="doubleElement">
+                <input type="submit" value="Se connecter" id="submitBtn">
+                <input type="reset" value="Reinitialiser" id="resetBtn">
+                <span id="fieldNote">(*) Ces champs sont obligatoires.</span>
+            </div>
+        </form>
+    </div>
+    <script src="../JavaScript/style.js"></script>
+    <script src="../JavaScript/login.js"></script>
+</body>
+</html>
