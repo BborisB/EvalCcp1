@@ -12,7 +12,7 @@
 .imgAcceuil
 {
     object-fit: cover;
-    height: 25vw;
+    height: calc(15vw + 15vh);
     width: 100%;
     filter: brightness(0.75);
 }
