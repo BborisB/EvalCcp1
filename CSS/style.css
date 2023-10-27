@@ -66,7 +66,7 @@ h2
     gap: 2em;
 }
 
-.doubleElement
+.multipleElement
 {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -75,14 +75,18 @@ h2
     gap: 2em;
 }
 
-.doubleElement *
+.multipleElement a
 {
     display: flex;
-    flex: 1 0 0;
     text-decoration: none;
 }
 
-.doubleElement span
+.multipleElement *
+{
+    flex: 1 0 0;
+}
+
+.formSpanNote
 {
     flex: 3 0 0;
     min-width: 150px;
@@ -116,10 +120,15 @@ h2
 
 @media only screen and (max-width: 600px)
 {
-    .doubleElement
+    .multipleElement
     {
         flex-direction: column-reverse;
         flex-wrap: nowrap;
         align-items: initial;
+    }
+
+    .formSpanNote
+    {
+        min-width: 0;
     }
 }

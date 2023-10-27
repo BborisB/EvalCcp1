@@ -6,6 +6,17 @@ let passwordErrorText = document.querySelector("#passwordErrorText");
 let loginErrorText = document.querySelector("#loginErrorText");
 myForm.addEventListener("submit", (e)=>
 {
+    if(!verifyLogin())
+        e.preventDefault();
+});
+
+/**
+ * Verifie les champs du loginForm et affiche les messages nécessaires.
+ * @return {boolean} true si le form peut être submit, false sinon.
+ */
+function verifyLogin()
+{
+    let result = true;
     let user = JSON.parse(localStorage.getItem("user"));
     if(user!=null)
     {
@@ -15,7 +26,7 @@ myForm.addEventListener("submit", (e)=>
         {
             email.style.borderColor = "#BB0000";
             emailErrorText.textContent = "L'addresse mail est incorrecte.";
-            e.preventDefault();
+            result = false;
         }
         else
         {
@@ -26,7 +37,7 @@ myForm.addEventListener("submit", (e)=>
         {
             password.style.borderColor = "#BB0000";
             passwordErrorText.textContent = "Le mot de passe est incorrect.";
-            e.preventDefault();
+            result = false;
         }
         else
         {
@@ -38,6 +49,7 @@ myForm.addEventListener("submit", (e)=>
     {
         loginErrorText.textContent = "Vous n'êtes pas encore enregistrés."
         myForm.style.borderColor = "#BB0000";
-        e.preventDefault();
+        result = false;
     }
-});
+    return result;
+}

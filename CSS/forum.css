@@ -10,7 +10,48 @@
     gap: 1.5em;
     width: calc(100% - 3em);
     background-color: #00000080;
-    border-bottom: #000 solid calc(0.05vw + 0.1em);
+    border-bottom: #000 solid calc(0.025vw + 0.15em);
     backdrop-filter: blur(10px);
     color: #fff;
+}
+
+.userWelcome *
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.masterCard
+{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 2em;
+    padding: 2em;
+    border: #000 solid calc(0.1vw + 0.2em);
+}
+
+#commerceCard
+{
+    background-color: #eee;
+    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueCaisse.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#cultureCard
+{
+    background-color: #eee;
+    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueChamp.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#cuisineCard
+{
+    background-color: #eee;
+    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueCuisine.jpg);
+    background-size: cover;
+    background-position: center;
 }

@@ -16,7 +16,7 @@ let passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#+-^\[\]])(?=.{8,})/;
 myForm.addEventListener("submit", (e)=>
 {
     e.preventDefault();
-    if(verif())
+    if(verifyRegister())
     {
         let user = 
         {
@@ -34,7 +34,7 @@ myForm.addEventListener("submit", (e)=>
  * Verifie les champs du registerForm et affiche les messages nécessaires.
  * @return {boolean} true si le form peut être submit, false sinon.
  */
-function verif()
+function verifyRegister()
 {
     let result = true;
     //FirstName verification
