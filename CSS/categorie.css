@@ -1,6 +1,6 @@
 #categorieTable tr
 {
-    border-block: #000 solid 2px;
+    border-block: #000 solid calc(0.05vw + 0.1em);
 }
 
 #categorieTable thead
@@ -10,11 +10,38 @@
 
 #categorieTable td, #categorieTable th
 {
-    padding: 1em;
+    padding: 1vw;
 }
 
 #categorieTable
 {
     text-align: center;
     background-color: #eee;
+    border: #000 solid calc(0.1vw + 0.2em);
+}
+
+.addWindowBackground
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #00000080;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.addWindow
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/Laitue1.jpg);
+    height: fit-content;
+    padding: 2em;
+    gap: 2em;
+    border: #000 solid calc(0.1vw + 0.2em);;
 }

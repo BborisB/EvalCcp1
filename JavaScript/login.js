@@ -6,24 +6,31 @@ let passwordErrorText = document.querySelector("#passwordErrorText");
 let loginErrorText = document.querySelector("#loginErrorText");
 myForm.addEventListener("submit", (e)=>
 {
-    if(!verifyLogin())
+    let forumUser = JSON.parse(localStorage.getItem("forumUser"));
+    if(!verifyLogin(forumUser))
         e.preventDefault();
+    else
+    {
+        let date = new Date();
+        forumUser.lastConnection = date.toLocaleTimeString();
+        localStorage.setItem("forumUser", JSON.stringify(forumUser))
+    }
 });
 
 /**
  * Verifie les champs du loginForm et affiche les messages nécessaires.
+ * @param {any} forumUser L'utilisateur dans le local storage.
  * @return {boolean} true si le form peut être submit, false sinon.
  */
-function verifyLogin()
+function verifyLogin(forumUser)
 {
     let result = true;
-    let user = JSON.parse(localStorage.getItem("user"));
-    if(user!=null)
+    if(forumUser!=null)
     {
         loginErrorText.style.display = "none";
         loginErrorText.textContent = ""
         myForm.style.borderColor = "#000000";
-        if(user.email!=email.value)
+        if(forumUser.email!=email.value)
         {
             email.style.borderColor = "#BB0000";
             emailErrorText.textContent = "L'addresse mail est incorrecte.";
@@ -34,7 +41,7 @@ function verifyLogin()
             email.style.borderColor = "#000000";
             emailErrorText.textContent = "";
         }
-        if(user.password!=password.value)
+        if(forumUser.password!=password.value)
         {
             password.style.borderColor = "#BB0000";
             passwordErrorText.textContent = "Le mot de passe est incorrect.";

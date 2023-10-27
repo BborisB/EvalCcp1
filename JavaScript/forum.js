@@ -6,7 +6,7 @@ commerceCard.addEventListener("click", ()=>
 {
     let forumCategorie = 
     {
-        backgroundImage: "url('../Images/laitueCaisse.jpg')",
+        backgroundImage: "url(../Images/laitueCaisse.jpg)",
         title: "Commerce"
     };
     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))
@@ -16,7 +16,7 @@ cultureCard.addEventListener("click", ()=>
 {
     let forumCategorie = 
     {
-        backgroundImage: "url('../Images/laitueChamp.jpg')",
+        backgroundImage: "url(../Images/laitueChamp.jpg)",
         title: "Culture"
     };
     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))
@@ -26,7 +26,7 @@ cuisineCard.addEventListener("click", ()=>
 {
     let forumCategorie = 
     {
-        backgroundImage: "url('../Images/laitueCuisine.jpg')",
+        backgroundImage: "url(../Images/laitueCuisine.jpg)",
         title: "Cuisine"
     };
     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))

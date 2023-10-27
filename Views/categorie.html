@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="userWelcome">
-        <span>Bienvenue <span id="firstName"></span><span id="lastName"></span></span>
-        <span>Nous sommes le <span id="date"></span></span>
-        <span>Connecté à <span id="time"></span></span>
+        <span id="bandeauUser"></span>
+        <span id="bandeauDate"></span>
+        <span id="bandeauConnection"></span>
     </div>
     <div class="page">
-        <h1 id="pageTitle">Categorie</h1>
+        <h1 id="pageTitle"></h1>
         <table id="categorieTable">
             <thead>
                 <tr>
@@ -34,7 +34,24 @@
                 </tr>
             </tbody>
         </table>
+        <button id="addBtn">Ajouter un sujet</button>
     </div>
+    <div class="addWindowBackground" id="addWindow">
+        <div class="addWindow">
+            <h1>Ajouter un sujet</h1>
+            <div class="label-input">
+                <label for="subjectName">Nom (*)</label>
+                <input type="text" id="subjectName">
+                <span class="fieldError" id="subjectNameErrorText"></span>
+            </div>
+            <div class="multipleElement">
+                <button id="addWindowCancel">Annuler</button>
+                <button id="addWindowAdd">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <script src="../JavaScript/style.js"></script>
     <script src="../JavaScript/categorie.js"></script>
+    <script src="../JavaScript/bandeau.js"></script>
 </body>
 </html>

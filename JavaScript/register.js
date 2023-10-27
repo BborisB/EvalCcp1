@@ -18,13 +18,15 @@ myForm.addEventListener("submit", (e)=>
     e.preventDefault();
     if(verifyRegister())
     {
-        let user = 
+        let forumUser = 
         {
-            userName: firstName.value + " " + lastName.value,
+            firstName: firstName.value,
+            lastName: lastName.value,
             email: email.value,
-            password: password.value
+            password: password.value,
+            lastConnection: ""
         }
-        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("forumUser", JSON.stringify(forumUser));
         myForm.style.display = "none";
         registerSuccessful.style.display = "flex";
     }
