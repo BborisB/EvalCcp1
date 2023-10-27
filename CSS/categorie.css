@@ -1,0 +1,20 @@
+#categorieTable tr
+{
+    border-block: #000 solid 2px;
+}
+
+#categorieTable thead
+{
+    font-weight: bold;
+}
+
+#categorieTable td, #categorieTable th
+{
+    padding: 1em;
+}
+
+#categorieTable
+{
+    text-align: center;
+    background-color: #eee;
+}

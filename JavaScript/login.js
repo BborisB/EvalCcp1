@@ -20,6 +20,7 @@ function verifyLogin()
     let user = JSON.parse(localStorage.getItem("user"));
     if(user!=null)
     {
+        loginErrorText.style.display = "none";
         loginErrorText.textContent = ""
         myForm.style.borderColor = "#000000";
         if(user.email!=email.value)
@@ -47,6 +48,7 @@ function verifyLogin()
     }
     else
     {
+        loginErrorText.style.display = "block";
         loginErrorText.textContent = "Vous n'êtes pas encore enregistrés."
         myForm.style.borderColor = "#BB0000";
         result = false;

@@ -38,7 +38,8 @@ input[type="text"], input[type="email"], input[type="password"]
 
 h1
 {
-    font-size: calc(1.25em + 1.75vw);
+    font-size: calc(1.75em + 1.75vw);
+    /* font-size: 300%; */
     text-align: center;
 }
 
@@ -84,6 +85,7 @@ h2
 .multipleElement *
 {
     flex: 1 0 0;
+    align-self: stretch;
 }
 
 .formSpanNote
@@ -116,6 +118,30 @@ h2
 .label-input *
 {
     min-width: 0;
+}
+
+/* Le bandeau tout en haut */
+.userWelcome
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    padding: 0.5em 1.5em;
+    gap: 1.5em;
+    width: calc(100% - 3em);
+    background-color: #00000080;
+    border-bottom: #000 solid calc(0.025vw + 0.15em);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.userWelcome *
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 600px)
