@@ -1,58 +1,27 @@
-// let commerceCard = document.querySelector("#commerceCard");
-// let cultureCard = document.querySelector("#cultureCard");
-// let cuisineCard = document.querySelector("#cuisineCard");
-
-// commerceCard.addEventListener("click", ()=>
-// {
-//     let forumCategorie = 
-//     {
-//         backgroundImage: "url(../Images/laitueCaisse.jpg)",
-//         title: "Commerce"
-//     };
-//     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))
-// });
-
-// cultureCard.addEventListener("click", ()=>
-// {
-//     let forumCategorie = 
-//     {
-//         backgroundImage: "url(../Images/laitueChamp.jpg)",
-//         title: "Culture"
-//     };
-//     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))
-// });
-
-// cuisineCard.addEventListener("click", ()=>
-// {
-//     let forumCategorie = 
-//     {
-//         backgroundImage: "url(../Images/laitueCuisine.jpg)",
-//         title: "Cuisine"
-//     };
-//     localStorage.setItem("forumCategorie", JSON.stringify(forumCategorie))
-// });
-
 let cards = document.querySelector("#cards");
 
 let cat1 = 
 {
     title: "Commerce",
     description: "Découvrez et échangez les meilleures astuces de cuisine avec la laitue, et partagez vos meilleures recettes de laitue ici.",
-    backgroundImage: "../Images/laitueCaisse.jpg"
+    backgroundImage: "../Images/laitueCaisse.jpg",
+    subjects: new Array()
 };
 
 let cat2 = 
 {
     title: "Culture",
     description: "Découvrez et échangez les méthodes de culture de la laitue, et partagez avec les cultivateurs pour découvrir les secrets de la laitue.",
-    backgroundImage: "../Images/laitueChamp.jpg"
+    backgroundImage: "../Images/laitueChamp.jpg",
+    subjects: new Array()
 };
 
 let cat3 = 
 {
     title: "Cuisine",
     description: "Découvrez et échangez avec les marchands, commercants et autres fans de laitue, et partagez vos meilleurs plans pour acheter de la laitue.",
-    backgroundImage: "../Images/laitueCuisine.jpg"
+    backgroundImage: "../Images/laitueCuisine.jpg",
+    subjects: new Array()
 };
 
 let categories = [cat1, cat2, cat3];

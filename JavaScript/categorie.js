@@ -16,12 +16,15 @@ if(categories!=null && currentCategoryIndex!=NaN)
     categorieTable.style.backgroundPosition = "center";
     categorieTable.style.backgroundSize = "cover"
     pageTitle.textContent = currentCategory.title;
+    for(let i=0;i<currentCategory.subjects.length;i++)
+    {
+        //load categories into the table
+    }
 }
 
 addBtn.addEventListener("click", ()=>
 {
     addWindow.style.display = "flex";
-    // categorieTable.row.insertCell().append(document.createTextNode(produit["articleName"]));
 });
 
 addWindowAdd.addEventListener("click", ()=>
