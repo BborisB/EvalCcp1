@@ -17,27 +17,3 @@
 {
     box-shadow: 0em 0em 2em;
 }
-
-#commerceCard
-{
-    background-color: #eee;
-    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueCaisse.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-#cultureCard
-{
-    background-color: #eee;
-    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueChamp.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-#cuisineCard
-{
-    background-color: #eee;
-    background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/laitueCuisine.jpg);
-    background-size: cover;
-    background-position: center;
-}

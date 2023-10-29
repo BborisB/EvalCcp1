@@ -40,8 +40,15 @@
     flex-direction: column;
     background-color: #eee;
     background-image: linear-gradient(#e6e6e6cc, #e6e6e6cc), url(../Images/Laitue1.jpg);
-    height: fit-content;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
     padding: 2em;
     gap: 2em;
     border: #000 solid calc(0.1vw + 0.2em);;
+}
+
+.addWindow h1
+{
+    font-size: 200%;
 }

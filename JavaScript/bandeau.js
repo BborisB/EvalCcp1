@@ -8,5 +8,5 @@ if(forumUser!=null)
     let date = new Date();
     bandeauUser.textContent = "Bienvenue " + forumUser.firstName + " " + forumUser.lastName;
     bandeauDate.textContent = "Nous sommes le " + date.toLocaleDateString();
-    bandeauConnection.textContent = "Connecté le " + forumUser.lastConnection;
+    bandeauConnection.textContent = "Connecté à " + forumUser.lastConnection;
 }
