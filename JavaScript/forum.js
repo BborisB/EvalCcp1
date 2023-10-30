@@ -5,7 +5,7 @@ let cat1 =
     title: "Commerce",
     description: "Découvrez et échangez les meilleures astuces de cuisine avec la laitue, et partagez vos meilleures recettes de laitue ici.",
     backgroundImage: "../Images/laitueCaisse.jpg",
-    subjects: new Array()
+    subjects: [{title: "test", id: 0, auteur: "Boris", lastComment: "XX/XX/XXXX", messages: [{auteur: "Boris", message: "Je ne cuisine pas la laitue, je la mange.", date: "XX/XX/XXXX"}]}]
 };
 
 let cat2 = 
@@ -13,7 +13,7 @@ let cat2 =
     title: "Culture",
     description: "Découvrez et échangez les méthodes de culture de la laitue, et partagez avec les cultivateurs pour découvrir les secrets de la laitue.",
     backgroundImage: "../Images/laitueChamp.jpg",
-    subjects: new Array()
+    subjects: [{title: "test", id: 0, auteur: "Boris", lastComment: "XX/XX/XXXX", messages: [{auteur: "Boris", message: "Je ne cuisine pas la laitue, je la mange.", date: "XX/XX/XXXX"}]}]
 };
 
 let cat3 = 
@@ -21,7 +21,7 @@ let cat3 =
     title: "Cuisine",
     description: "Découvrez et échangez avec les marchands, commercants et autres fans de laitue, et partagez vos meilleurs plans pour acheter de la laitue.",
     backgroundImage: "../Images/laitueCuisine.jpg",
-    subjects: new Array()
+    subjects: [{title: "test", id: 0, auteur: "Boris", lastComment: "XX/XX/XXXX", messages: [{auteur: "Boris", message: "Je ne cuisine pas la laitue, je la mange.", date: "XX/XX/XXXX"}]}]
 };
 
 let categories = [cat1, cat2, cat3];

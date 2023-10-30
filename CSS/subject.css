@@ -1,0 +1,80 @@
+.page
+{
+    height: calc(100vh - 9em);
+}
+
+#chat
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    align-items: start;
+    padding: 2em;
+    gap: 2em;
+    border: #000 solid calc(0.1vw + 0.2em);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.message
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.message h2:last-child
+{
+    text-align: end;
+}
+
+hr
+{
+    width: 100%;
+}
+
+.enterMessage
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+    background-color: #eee;
+    border: #000 solid calc(0.1vw + 0.2em);
+}
+
+#messageText
+{
+    padding: 0.625em;
+    border: #000 solid calc(0.05vw + 0.1em);
+    background-color: #fff;
+    max-height: 6em;
+    overflow: auto;
+}
+
+#messageText[contenteditable][placeholder]:empty:before
+{
+    content: attr(placeholder);
+    position: absolute;
+    color: gray;
+    background-color: transparent;
+}
+
+#textAreaMessage
+{
+    font: inherit;
+    resize: none;
+    border: #000 solid calc(0.05vw + 0.1em);
+    padding: 0.625em 0.625em 0 0.625em;
+    max-height: 25vh;
+    flex: 4 0 0;
+}
+
+@media only screen and (max-width: 600px)
+{
+    #textAreaMessage
+    {
+        flex: auto;
+    }
+}
