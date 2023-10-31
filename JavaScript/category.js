@@ -1,4 +1,3 @@
-// let forumCategorie = JSON.parse(localStorage.getItem("forumCategorie"));
 let categories = JSON.parse(localStorage.getItem("categories"));
 let currentCategoryIndex = parseInt(localStorage.getItem("currentCategoryIndex"))
 let categorieTable = document.querySelector("#categorieTable");
@@ -9,9 +8,8 @@ let addWindowAdd = document.querySelector("#addWindowAdd");
 let addWindowCancel = document.querySelector("#addWindowCancel");
 let subjectName = document.querySelector("#subjectName");
 let subjectNameErrorText = document.querySelector("#subjectNameErrorText");
-let blue = false;
-// let forumUser = JSON.parse(localStorage.getItem("forumUser"))
-if(categories!=null || currentCategoryIndex!=NaN)
+//let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+if(categories!=null && currentCategoryIndex!=NaN && currentCategoryIndex<categories.length && currentCategoryIndex>=0)
 {
     let currentCategory = categories[currentCategoryIndex];
     document.title = currentCategory.title;
@@ -24,6 +22,10 @@ if(categories!=null || currentCategoryIndex!=NaN)
         let subject = currentCategory.subjects[i];
         addSubject(subject);
     }
+}
+else
+{
+    location.href = location.href.replace("category.html", "forum.html");
 }
 
 addBtn.addEventListener("click", ()=>
@@ -45,7 +47,7 @@ addWindowAdd.addEventListener("click", ()=>
         {
             title: subjectName.value,
             id: currentCategory.subjects.length + 1,
-            auteur: forumUser.firstName + " " + forumUser.lastName,
+            auteur: currentUser.firstName + " " + currentUser.lastName,
             lastComment: "-",
             messages: new Array()
         };
@@ -65,13 +67,13 @@ addWindowCancel.addEventListener("click", ()=>
 });
 
 /**
- * 
+ * Ajoute le sujet dans la catégorie dans l'html.
  * @param {Object} subject Le sujet à ajouter.
  * @param {string} subject.title Le titre du sujet.
  * @param {Number} subject.id Le numéro du sujet.
  * @param {string} subject.auteur L'auteur du sujet.
  * @param {string} subject.lastComment La date du dernier commentaire.
- * @param {{string, string, string}[]} subject.messages Les messages sur le sujet (message, auteur, date)
+ * @param {{string, string, string}[]} subject.messages Les messages sur le sujet (auteur, message, date)
  */
 function addSubject(subject)
 {
@@ -81,7 +83,7 @@ function addSubject(subject)
     link.textContent = subject.title;
     link.addEventListener("click", ()=>
     {
-        localStorage.setItem("currentSubject", subject.id);
+        localStorage.setItem("currentSubjectId", subject.id);
     });
     row.insertCell().appendChild(document.createTextNode(subject.id));
     row.insertCell().appendChild(link);

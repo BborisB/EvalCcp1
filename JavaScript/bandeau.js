@@ -1,12 +1,31 @@
 let bandeauUser = document.querySelector("#bandeauUser");
 let bandeauDate = document.querySelector("#bandeauDate");
 let bandeauConnection = document.querySelector("#bandeauConnection");
-let forumUser = JSON.parse(localStorage.getItem("forumUser"));
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-if(forumUser!=null)
+if(currentUser!=null)
 {
-    let date = new Date();
-    bandeauUser.textContent = "Bienvenue " + forumUser.firstName + " " + forumUser.lastName;
-    bandeauDate.textContent = "Nous sommes le " + date.toLocaleDateString();
-    bandeauConnection.textContent = "Connecté à " + forumUser.lastConnection;
+    bandeauUser.textContent = "Bienvenue " + currentUser.firstName + " " + currentUser.lastName;
+    bandeauDate.textContent = "Nous sommes le " + new Date().toLocaleDateString();
+    bandeauConnection.textContent = "Connecté à " + currentUser.lastConnection;
+}
+else
+{
+    let newLocation = location.href.replace(/Views.*/, "index.html");
+    if(newLocation!=location.href)
+    {
+        location.replace(location.href.replace(/Views.*/, "index.html"));
+    }
+    else
+    {
+        //dans le cas ou on est deja sur index.html
+        bandeauUser.textContent = "";
+        bandeauDate.textContent = "Bienvenue. Enregistrez vous, ou connectez vous.";
+        bandeauConnection.textContent = "";
+    }
+}
+
+function f()
+{
+    
 }

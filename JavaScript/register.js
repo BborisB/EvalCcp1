@@ -12,6 +12,12 @@ let passwordErrorText = document.querySelector("#passwordErrorText");
 let confirmPasswordErrorText = document.querySelector("#confirmPasswordErrorText");
 let emailRe = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 let passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#+-^\[\]])(?=.{8,})/;
+let forumUsers = JSON.parse(localStorage.getItem("forumUsers"));
+if(forumUsers==null)
+{
+    forumUsers = new Array();
+    localStorage.setItem("forumUsers", JSON.stringify(forumUsers));
+}
 
 myForm.addEventListener("submit", (e)=>
 {
@@ -25,8 +31,9 @@ myForm.addEventListener("submit", (e)=>
             email: email.value,
             password: password.value,
             lastConnection: ""
-        }
-        localStorage.setItem("forumUser", JSON.stringify(forumUser));
+        };
+        forumUsers.push(forumUser);
+        localStorage.setItem("forumUsers", JSON.stringify(forumUsers));
         myForm.style.display = "none";
         registerSuccessful.style.display = "flex";
     }
@@ -80,6 +87,12 @@ function verifyRegister()
     {
         email.style.borderColor = "#BB0000";
         emailErrorText.textContent = "Email invalide.";
+        result = false;
+    }
+    else if(forumUsers.some(e => e.email == email.value))
+    {
+        email.style.borderColor = "#BB0000";
+        emailErrorText.textContent = "Cet email est déjà utilisé.";
         result = false;
     }
     else

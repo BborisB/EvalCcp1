@@ -9,44 +9,26 @@
     <link rel="stylesheet" href="../CSS/subject.css">
 </head>
 <body>
-    <div class="page">
-        <div id="chat">
-            <h1>Titre du sujet</h1>
-            <hr/>
-            <div class="message">
-                <h2>Auteur</h2>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident hic quidem quae voluptatibus fugit at sit eos quas temporibus deserunt, enim dignissimos a aliquam harum reprehenderit doloremque unde quam.</span>
-                <h2>Date</h2>
-            </div>
-            <hr/>
-            <div class="message">
-                <h2>Auteur</h2>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident hic quidem quae voluptatibus fugit at sit eos quas temporibus deserunt, enim dignissimos a aliquam harum reprehenderit doloremque unde quam.</span>
-                <h2>Date</h2>
-            </div>
-            <hr/>
-            <div class="message">
-                <h2>Auteur</h2>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident hic quidem quae voluptatibus fugit at sit eos quas temporibus deserunt, enim dignissimos a aliquam harum reprehenderit doloremque unde quam.</span>
-                <h2>Date</h2>
-            </div>
-            <hr/>
-            <div class="message">
-                <h2>Auteur</h2>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident hic quidem quae voluptatibus fugit at sit eos quas temporibus deserunt, enim dignissimos a aliquam harum reprehenderit doloremque unde quam.</span>
-                <h2>Date</h2>
-            </div>
-            <hr/>
+    <div class="newBody">
+        <div class="userWelcome">
+            <span id="bandeauUser"></span>
+            <span id="bandeauDate"></span>
+            <span id="bandeauConnection"></span>
         </div>
-        <div class="enterMessage">
-            <div class="label-input">
-                <div class="multipleElement">
-                    <button>Envoyer</button>
+        <div class="page">
+            <div class="chat-enterMessage">
+                <div id="chat">
+                    <h1 id="title"></h1>
+                    <hr/>
+                </div>
+                <div class="enterMessage">
                     <textarea spellcheck="false" id="textAreaMessage" placeholder="Entrez un message." rows="1"></textarea>
+                    <button id="sendBtn">Envoyer</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../JavaScript/bandeau.js"></script>
     <script src="../JavaScript/style.js"></script>
     <script src="../JavaScript/subject.js"></script>
 </body>

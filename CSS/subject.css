@@ -1,20 +1,13 @@
-.page
-{
-    height: calc(100vh - 9em);
-}
-
 #chat
 {
     display: flex;
     flex-direction: column;
-    background-color: #eee;
     align-items: start;
-    padding: 2em;
     gap: 2em;
-    border: #000 solid calc(0.1vw + 0.2em);
     overflow-x: hidden;
     overflow-y: auto;
-    height: 100%;
+    flex: 1 0 0;
+    padding: 2em;
 }
 
 .message
@@ -22,6 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
+    width: 100%;
 }
 
 .message h2:last-child
@@ -34,14 +28,22 @@ hr
     width: 100%;
 }
 
+.chat-enterMessage
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #eee;
+    border: #000 solid calc(0.1vw + 0.2em);
+}
+
 .enterMessage
 {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    border-top: #000 solid calc(0.1vw + 0.2em);
     padding: 2em;
-    gap: 2em;
-    background-color: #eee;
-    border: #000 solid calc(0.1vw + 0.2em);
 }
 
 #messageText
@@ -66,15 +68,18 @@ hr
     font: inherit;
     resize: none;
     border: #000 solid calc(0.05vw + 0.1em);
-    padding: 0.625em 0.625em 0 0.625em;
+    padding: 0.625em;
     max-height: 25vh;
-    flex: 4 0 0;
 }
 
-@media only screen and (max-width: 600px)
+.page
 {
-    #textAreaMessage
-    {
-        flex: auto;
-    }
+    height: 100%;
+}
+
+.newBody
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
