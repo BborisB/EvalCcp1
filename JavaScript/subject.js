@@ -15,11 +15,11 @@ else
     let sendBtn = document.querySelector("#sendBtn");
 
     textAreaMessage.style.height="1em";
-        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.25em)";
+        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
     textAreaMessage.addEventListener("input", ()=>
     {
         textAreaMessage.style.height="1em";
-        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.25em)";
+        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
         textAreaMessage.scrollTop = textAreaMessage.scrollHeight;
     });
 
@@ -27,7 +27,7 @@ else
     function textAreaResize()
     {
         textAreaMessage.style.height="1em";
-        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.25em)";
+        textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
     }
     new ResizeObserver(textAreaResize).observe(textAreaMessage)
        
