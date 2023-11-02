@@ -20,6 +20,7 @@ else
         else
         {
             let chat = document.querySelector("#chat");
+            let textAreaDiv = document.querySelector("#textAreaDiv");
             let textAreaMessage = document.querySelector("#textAreaMessage");
             let sendBtn = document.querySelector("#sendBtn");
             let title = document.querySelector("#title");
@@ -31,9 +32,9 @@ else
             }
             function textAreaResize()
             {
-                textAreaMessage.style.height="auto";
-                textAreaMessage.style.height = textAreaMessage.scrollHeight + "px";
-                textAreaMessage.scrollTop = textAreaMessage.scrollHeight;
+                textAreaMessage.style.height = "1em";
+                textAreaMessage.style.height = "calc(" + textAreaMessage.scrollHeight + "px - 0.15em)";
+                textAreaDiv.scrollTop = textAreaDiv.scrollHeight;
             }
             textAreaResize();
             textAreaMessage.addEventListener("input", textAreaResize);
