@@ -42,14 +42,9 @@ for(let i=0;i<categories.length;i++)
     masterCard.style.backgroundImage = "linear-gradient(#e6e6e6cc, #e6e6e6cc), url(" + categories[i].backgroundImage + ")";
     masterCard.style.backgroundPosition = "center";
     masterCard.style.backgroundSize = "cover";
-    let catTitle = masterCard.appendChild(document.createElement("h1"));
-    catTitle.textContent = categories[i].title;
-    catTitle.style.flex = "0";
-    let catDesc = masterCard.appendChild(document.createElement("span"));
-    catDesc.textContent = categories[i].description;
-    let clickMe = masterCard.appendChild(document.createElement("h2"));
-    clickMe.textContent = "Cliquez pour découvir.";
-    clickMe.style.flex = "0";
+    masterCard.appendChild(document.createElement("h1")).textContent = categories[i].title;
+    masterCard.appendChild(document.createElement("span")).textContent = categories[i].description;;
+    masterCard.appendChild(document.createElement("h2")).textContent = "Cliquez pour découvir.";
     masterCard.addEventListener("click", ()=>
     {
         localStorage.setItem("currentCategoryIndex", i);
