@@ -29,21 +29,15 @@ else
             {
                 addMessage(currentSubject.messages[i]);
             }
-        
-            textAreaMessage.style.height="1em";
-            textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
-            textAreaMessage.addEventListener("input", ()=>
-            {
-                textAreaMessage.style.height="1em";
-                textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
-                textAreaMessage.scrollTop = textAreaMessage.scrollHeight;
-            });
-            //Redimensionne le textArea quand il change de taille (surtout quand il change de largeur).
             function textAreaResize()
             {
-                textAreaMessage.style.height="1em";
-                textAreaMessage.style.height = "calc("+textAreaMessage.scrollHeight+"px - 1.245em)";
+                textAreaMessage.style.height="auto";
+                textAreaMessage.style.height = textAreaMessage.scrollHeight + "px";
+                textAreaMessage.scrollTop = textAreaMessage.scrollHeight;
             }
+            textAreaResize();
+            textAreaMessage.addEventListener("input", textAreaResize);
+            //Redimensionne le textArea quand il change de taille (surtout quand il change de largeur).
             new ResizeObserver(textAreaResize).observe(textAreaMessage);
             textAreaMessage.addEventListener("keydown", (e)=>
             {

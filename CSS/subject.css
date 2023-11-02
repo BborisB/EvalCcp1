@@ -63,13 +63,21 @@ hr
     background-color: transparent;
 }
 
+.textAreaDiv
+{
+    border: #000 solid calc(0.05vw + 0.1em);
+    padding: 0.625em;
+    background-color: #fff;
+}
+
 #textAreaMessage
 {
     font: inherit;
     resize: none;
-    border: #000 solid calc(0.05vw + 0.1em);
-    padding: 0.625em;
     max-height: 25vh;
+    outline: none;
+    background-color: #fff;
+    width: 100%;
 }
 
 .page
