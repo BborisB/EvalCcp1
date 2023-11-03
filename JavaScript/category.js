@@ -25,7 +25,7 @@ if(categories!=null && currentCategoryIndex!=NaN && currentCategoryIndex<categor
 }
 else
 {
-    location.href = location.href.replace("category.html", "forum.html");
+    location.replace("forum.html");
 }
 
 addBtn.addEventListener("click", ()=>

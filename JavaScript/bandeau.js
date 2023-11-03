@@ -11,10 +11,9 @@ if(currentUser!=null)
 }
 else
 {
-    let newLocation = location.href.replace(/Views.*/, "index.html");
-    if(newLocation!=location.href)
+    if(!location.href.includes("index.html"))
     {
-        location.replace(location.href.replace(/Views.*/, "index.html"));
+        location.replace("../index.html");
     }
     else
     {
@@ -22,10 +21,7 @@ else
         bandeauUser.textContent = "";
         bandeauDate.textContent = "Bienvenue. Enregistrez vous, ou connectez vous.";
         bandeauConnection.textContent = "";
+        bandeauUser.style.display = "none";
+        bandeauConnection.style.display = "none";
     }
-}
-
-function f()
-{
-    
 }

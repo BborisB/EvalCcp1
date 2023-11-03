@@ -1,6 +1,7 @@
 let categories = JSON.parse(localStorage.getItem("categories"));
 if(categories==null)
 {
+    location.replace("forum.html");
     location.href = location.href.replace("subject.html", "forum.html");
 }
 else
